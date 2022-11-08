@@ -2,7 +2,7 @@
 
 Visit online https://effulgent-sunburst-9cd7fc.netlify.app
 
-Create the [.env] file in the root project directory and fill it with [.env.example].
+Create the `.env` file in the root project directory and fill it with `.env.example`.
 
 ## Available Scripts
 
