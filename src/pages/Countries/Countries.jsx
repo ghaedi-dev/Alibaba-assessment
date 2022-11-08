@@ -12,8 +12,13 @@ function Countries({ countries }) {
 
     const countriesWithFilter = useMemo(() => {
         const fuse = new Fuse(countries, FUSE_OPTIONS);
-        const result = fuse.search(search).map(({ item }) => item);
-        return [...search ? result : countries].filter((country) => (
+        let result = countries;
+        
+        if (search) {
+            result = fuse.search(search).map(({ item }) => item);
+        }
+
+        return result.filter((country) => (
             region ? country.region.toLowerCase() === region : true
         ));
     }, [countries, search, region]);
@@ -34,7 +39,7 @@ function Countries({ countries }) {
                     </DropDown>
                 </div>
             </nav>
-            <section className="">
+            <section className="md:-m-5">
                 {countriesWithFilter.map((item, i) => (
                     <CountryCard key={i} {...item} />
                 ))}
