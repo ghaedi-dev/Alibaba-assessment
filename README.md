@@ -2,13 +2,14 @@
 
 Visit online https://effulgent-sunburst-9cd7fc.netlify.app
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create the [.env] file in the root project directory and fill it with [.env.example].
 
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm install`
+
+Install all dependencies.
 
 ### `npm start`
 
